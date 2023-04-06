@@ -17,7 +17,7 @@
   const CHAT_WRAPPER_HEIGHT = '600px';
   const CHAT_WRAPPER_WIDTH = '400px';
 
-  const CONTROLLER_SIZE = 50;
+  const CONTROLLER_SIZE = 48;
   const CONTROLLER_RADIUS = CONTROLLER_SIZE / 2;
   const CONTROLLER_BACKGROUND_COLOR = 'black';
   const CONTROLLER_ICON = `
@@ -44,8 +44,8 @@
     const controllerIframe = document.createElement('iframe');
     const chatIframe = document.createElement('iframe');
     const controllerIframeUrl = '';
-    const chatIframeUrl = `https://www.thinkhive.ai/expert-iframe/${expertId}`;
-    // const chatIframeUrl = `http://localhost:3000/expert-iframe/${expertId}`;
+    // const chatIframeUrl = `https://www.thinkhive.ai/expert-iframe/${expertId}`;
+    const chatIframeUrl = `http://localhost:3000/expert-iframe/${expertId}`;
     let domainAllowed = true;
 
     // PRIVATE METHODS
@@ -83,12 +83,13 @@
       controller.style.boxShadow = '0 4px 8px 0 rgba(0, 0, 0, 0.2)';
       controller.style.zIndex = `${Number.MAX_SAFE_INTEGER - 1}`;
       controller.style.cursor = 'pointer';
+      controller.style.transition = 'all .08s ease-in-out';
 
       controller.addEventListener('mouseenter', () => {
-        controller.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+        controller.style.transform = 'scale(1.07)';
       });
       controller.addEventListener('mouseleave', () => {
-        controller.style.backgroundColor = 'black';
+        controller.style.transform = 'scale(1)';
       });
 
       controller.addEventListener('click', () => {
