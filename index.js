@@ -44,8 +44,8 @@
     const controllerIframe = document.createElement('iframe');
     const chatIframe = document.createElement('iframe');
     const controllerIframeUrl = '';
-    // const chatIframeUrl = `https://www.thinkhive.ai/expert-iframe/${expertId}`;
-    const chatIframeUrl = `http://localhost:3000/expert-iframe/${expertId}`;
+    const chatIframeUrl = `https://www.thinkhive.ai/expert-iframe/${expertId}`;
+    // const chatIframeUrl = `http://localhost:3000/expert-iframe/${expertId}`;
     let domainAllowed = true;
 
     // PRIVATE METHODS
