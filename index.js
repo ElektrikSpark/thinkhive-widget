@@ -40,12 +40,12 @@
   const script = document.currentScript;
 
   const loadWidget = () => {
-    const expertId = script?.getAttribute('data-expertId');
+    const assistantId = script?.getAttribute('data-assistantId');
     const controllerIframe = document.createElement('iframe');
     const chatIframe = document.createElement('iframe');
     const controllerIframeUrl = '';
-    const chatIframeUrl = `https://www.thinkhive.ai/expert-iframe/${expertId}`;
-    // const chatIframeUrl = `http://localhost:3000/expert-iframe/${expertId}`;
+    const chatIframeUrl = `https://www.thinkhive.ai/assistant-iframe/${assistantId}`;
+    // const chatIframeUrl = `http://localhost:3000/assistant-iframe/${assistantId}`;
     let domainAllowed = true;
 
     // PRIVATE METHODS
@@ -58,7 +58,7 @@
     const ensureAllowed = () => {
       if (!domainAllowed) {
         throw new Error(
-          `${window.location.host} is not permitted to use this expert ${expertId}`
+          `${window.location.host} is not permitted to use this assistant ${assistantId}`
         );
       }
     };
@@ -219,7 +219,7 @@
         {
           type: INIT_IFRAME,
           value: {
-            expertId: expertId,
+            assistantId: assistantId,
             topHost: window.location.hostname,
           },
         },
