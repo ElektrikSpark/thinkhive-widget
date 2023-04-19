@@ -11,7 +11,7 @@
   // constants
   const CONTROLLER_WRAPPER_ID = 'thinkhive-controller-container';
   const CHAT_WRAPPER_ID = 'thinkhive-chat-container';
-  const CONTROLLER_IFRAME_ID = 'thinkhive-controller-iframe';
+  // const CONTROLLER_IFRAME_ID = 'thinkhive-controller-iframe';
   const CHAT_IFRAME_ID = 'thinkhive-chat-iframe';
 
   const CHAT_WRAPPER_HEIGHT = '600px';
@@ -41,9 +41,9 @@
 
   const loadWidget = () => {
     const assistantId = script?.getAttribute('data-assistantId');
-    const controllerIframe = document.createElement('iframe');
+    // const controllerIframe = document.createElement('iframe');
     const chatIframe = document.createElement('iframe');
-    const controllerIframeUrl = '';
+    // const controllerIframeUrl = '';
     const chatIframeUrl = `https://www.thinkhive.ai/assistant-iframe/${assistantId}`;
     // const chatIframeUrl = `http://localhost:3000/assistant-iframe/${assistantId}`;
     let domainAllowed = true;
